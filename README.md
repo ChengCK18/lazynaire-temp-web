@@ -1,4 +1,4 @@
 # lazynaire-web-temp
-Lazynaire Project</br>
+<b>Lazynaire Project</b></br>
 Work in Progress</br>
 https://lazynaire.com/
