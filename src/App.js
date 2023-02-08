@@ -3,7 +3,7 @@ import NavBar from "./components/NavBar";
 
 
 const App = () => {
-    const [userDevice, setUserDevice] = useState("laptop");
+    const [userDevice, setUserDevice] = useState("");
 
     useEffect(() => {
         let screenWidth = window.innerWidth;
@@ -121,27 +121,27 @@ const App = () => {
     }
 
     return (
-       
-            <div className="relative flex h-full w-screen flex-col overflow-hidden">
-                <NavBar userDevice={userDevice} />
 
-                <div className="absolute inset-0   h-full w-full justify-center  text-center">
-                    {/* <div className={`absolute z-20  ${userDevice === 'mobile' ? 'bottom-[63vh]' : 'bottom-[68vh]'}  w-full bg-white bg-opacity-0 text-center font-anton font-normal tracking-wider text-custom-theme-purple leading-none  mobile:text-[58px] tablet:text-[15.2vh] laptop:text-[150px]`}>
+        <div className="relative flex h-full w-screen flex-col overflow-hidden">
+            <NavBar userDevice={userDevice} />
+
+            <div className="absolute inset-0   h-full w-full justify-center  text-center">
+                {/* <div className={`absolute z-20  ${userDevice === 'mobile' ? 'bottom-[63vh]' : 'bottom-[68vh]'}  w-full bg-white bg-opacity-0 text-center font-anton font-normal tracking-wider text-custom-theme-purple leading-none  mobile:text-[58px] tablet:text-[15.2vh] laptop:text-[150px]`}>
                         <p className={`${screenHeight < 500 ? '' : ''}`}>HOME TO {userDevice === 'mobile' ? <br /> : ''} ALL.</p>
                     </div> */}
-                    <div className={`absolute z-20  ${userDevice === 'mobile' ? 'bottom-[60vh]' : 'bottom-[68vh]'}  w-full bg-white bg-opacity-0 text-center font-anton font-normal tracking-wider text-custom-theme-purple leading-none mobile:text-[10.2vh] laptop:text-[13.8vh]`}>
-                        <p className={``}>HOME TO {userDevice === 'mobile' ? <br /> : ''} ALL.</p>
-                    </div>
-
-
-
-                    {imageLayout}
-                    
+                <div className={`absolute z-20  ${userDevice === 'mobile' ? 'bottom-[60vh]' : 'bottom-[68vh]'}  w-full bg-white bg-opacity-0 text-center font-anton font-normal tracking-wider text-custom-theme-purple leading-none mobile:text-[10.2vh] laptop:text-[13.8vh]`}>
+                    <p className={``}>HOME TO {userDevice === 'mobile' ? <br /> : ''} ALL.</p>
                 </div>
 
+
+
+                {imageLayout}
+
             </div>
-           
-        
+
+        </div>
+
+
     );
 };
 
